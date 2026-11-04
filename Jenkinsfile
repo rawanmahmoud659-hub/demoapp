@@ -3,7 +3,7 @@
 
 pipeline {
     agent {
-        label 'jenkins-agent'
+        label 'agent1'
     }
 
     options {
@@ -16,6 +16,7 @@ pipeline {
         IMAGE_TAG = "${BUILD_NUMBER}"
         DEPLOYMENT_FILE = 'deployment.yaml'
         K8S_NAMESPACE = 'ivolve'
+	SERVER = 'https://172.31.7.13:6443'
     }
 
     stages {
@@ -51,7 +52,8 @@ pipeline {
                     deployOnK8s(
                         env.DOCKER_IMAGE,
                         env.IMAGE_TAG,
-                        env.DEPLOYMENT_FILE
+                        env.DEPLOYMENT_FILE,
+			env.SERVER
                     )
                 }
             }
