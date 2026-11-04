@@ -17,6 +17,8 @@ pipeline {
         DEPLOYMENT_FILE = 'deployment.yaml'
         K8S_NAMESPACE = 'ivolve'
 	SERVER = 'https://172.31.7.13:6443'
+	TMPDIR = '/home/ubuntu/trivy-tmp'
+        TRIVY_CACHE_DIR = '/home/ubuntu/.cache/trivy'
     }
 
     stages {
