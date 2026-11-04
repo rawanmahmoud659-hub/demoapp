@@ -4,7 +4,7 @@ metadata:
   labels:
     app: demoapp
   name: demoapp
-  metadata: ivolve
+  namespace: ivolve
 spec:
   replicas: 2
   selector:
@@ -17,7 +17,7 @@ spec:
         app: demoapp
     spec:
       containers:
-        - image: rawanm21/demoapp:1
+      - image: rawanm21/demoapp:1
         name: demoapp
         resources: {}
 status: {}
