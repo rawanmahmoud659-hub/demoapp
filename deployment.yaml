@@ -17,7 +17,7 @@ spec:
         app: demoapp
     spec:
       containers:
-      - image: rawanm21/demoapp:9
+      - image: rawanm21/demoapp:3
         name: demoapp
         resources: {}
 status: {}
